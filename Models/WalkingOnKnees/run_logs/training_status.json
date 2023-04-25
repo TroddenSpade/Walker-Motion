@@ -1,0 +1,65 @@
+{
+    "Walker": {
+        "checkpoints": [
+            {
+                "steps": 4999957,
+                "file_path": "results\\WalkToGoal-4.6\\Walker\\Walker-4999957.onnx",
+                "reward": 470.2008710158499,
+                "creation_time": 1680758158.6281095,
+                "auxillary_file_paths": [
+                    "results\\WalkToGoal-4.6\\Walker\\Walker-4999957.pt"
+                ]
+            },
+            {
+                "steps": 5499255,
+                "file_path": "results\\WalkToGoal-4.6\\Walker\\Walker-5499255.onnx",
+                "reward": 898.6186724576083,
+                "creation_time": 1680759986.2572098,
+                "auxillary_file_paths": [
+                    "results\\WalkToGoal-4.6\\Walker\\Walker-5499255.pt"
+                ]
+            },
+            {
+                "steps": 5999557,
+                "file_path": "results\\WalkToGoal-4.6\\Walker\\Walker-5999557.onnx",
+                "reward": 1305.3528812632842,
+                "creation_time": 1680761812.917139,
+                "auxillary_file_paths": [
+                    "results\\WalkToGoal-4.6\\Walker\\Walker-5999557.pt"
+                ]
+            },
+            {
+                "steps": 6499990,
+                "file_path": "results\\WalkToGoal-4.6\\Walker\\Walker-6499990.onnx",
+                "reward": 1831.018196105957,
+                "creation_time": 1680763622.5987253,
+                "auxillary_file_paths": [
+                    "results\\WalkToGoal-4.6\\Walker\\Walker-6499990.pt"
+                ]
+            },
+            {
+                "steps": 6744736,
+                "file_path": "results\\WalkToGoal-4.6\\Walker\\Walker-6744736.onnx",
+                "reward": 647.5932803153992,
+                "creation_time": 1680764637.086254,
+                "auxillary_file_paths": [
+                    "results\\WalkToGoal-4.6\\Walker\\Walker-6744736.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 6744736,
+            "file_path": "results\\WalkToGoal-4.6\\Walker.onnx",
+            "reward": 647.5932803153992,
+            "creation_time": 1680764637.086254,
+            "auxillary_file_paths": [
+                "results\\WalkToGoal-4.6\\Walker\\Walker-6744736.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.0.0+cpu"
+    }
+}
