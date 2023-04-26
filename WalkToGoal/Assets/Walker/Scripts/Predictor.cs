@@ -13,19 +13,19 @@ public class Predictor : MonoBehaviour
     private Transform hip;
     public GameObject walker;
 
-    private int completedSteps;
-    private Transform footL, footR;
+    // private int completedSteps;
+    // private Transform footL, footR;
 
     public Vector3 forward;
     public Vector3 position;
     public bool isLeft = false;
 
-    const float groundHeight = 0.568f;
+    const float groundHeight = 0.5277205f;
     const float maxRadian = Mathf.PI / 6.0f;
     const float stepSize = 1.3f;
-    const float stepWidth = 0.8f;
+    const float stepWidth = 0.4f;
 
-    const float rewardScale = 0.5f;
+    // const float rewardScale = 0.5f;
 
 
     private void DrawPath()
@@ -56,8 +56,8 @@ public class Predictor : MonoBehaviour
         cube = walker.transform.GetChild(2);
         agent = walker.GetComponent<Agent>();
 
-        footL = hip.Find("thighL/shinL/footL");
-        footR = hip.Find("thighR/shinR/footR");
+        // footL = hip.Find("thighL/shinL/footL");
+        // footR = hip.Find("thighR/shinR/footR");
     }
 
 
@@ -74,7 +74,7 @@ public class Predictor : MonoBehaviour
 
         Vector3 left = Vector3.Cross(this.forward, Vector3.up);
         Vector3 spawnPos = this.position + (this.isLeft ? left : -left) * stepWidth;
-        spawnPos.y = 0.568f;
+        spawnPos.y = groundHeight;
 
         transform.SetPositionAndRotation(spawnPos, Quaternion.LookRotation(this.forward, Vector3.up));
     }
@@ -82,7 +82,7 @@ public class Predictor : MonoBehaviour
 
     public void InitializeStep()
     {
-        completedSteps = 0;
+        // completedSteps = 0;
 
         this.position = new Vector3(hip.position.x, 0.0f, hip.position.z);
         this.forward = Vector3.Normalize(new Vector3(hip.forward.x, 0.0f, hip.forward.z));
@@ -114,7 +114,7 @@ public class Predictor : MonoBehaviour
         {
             if(isLeft == (col.gameObject.name == "footL"))
             {
-                completedSteps += 1;
+                // completedSteps += 1;
                 this.isLeft = (col.gameObject.name != "footL");
                 agent.AddReward(5.0f);
                 SetNextStep();

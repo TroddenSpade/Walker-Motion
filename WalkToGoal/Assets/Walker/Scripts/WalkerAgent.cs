@@ -307,7 +307,7 @@ public class WalkerAgent : Agent
     /// </summary>
     public void TouchedTarget()
     {
-        AddReward(10f);
+        AddReward(1.0f);
     }
 
     public void SetTorsoMass()
