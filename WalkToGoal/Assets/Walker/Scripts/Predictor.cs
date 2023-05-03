@@ -14,18 +14,20 @@ public class Predictor : MonoBehaviour
     public GameObject walker;
 
     // private int completedSteps;
-    // private Transform footL, footR;
+    private Transform footL, footR;
 
     public Vector3 forward;
     public Vector3 position;
+    public Vector3 last_pos;
     public bool isLeft = false;
 
+    const float rewardScale = 1.0f;
     const float groundHeight = 0.5277205f;
-    const float maxRadian = Mathf.PI / 6.0f;
-    const float stepSize = 1.3f;
+
+    const float maxRadian = Mathf.PI / 9.0f;
+    const float stepSize = 1.4f;
     const float stepWidth = 0.4f;
 
-    // const float rewardScale = 0.5f;
 
 
     private void DrawPath()
@@ -56,8 +58,8 @@ public class Predictor : MonoBehaviour
         cube = walker.transform.GetChild(2);
         agent = walker.GetComponent<Agent>();
 
-        // footL = hip.Find("thighL/shinL/footL");
-        // footR = hip.Find("thighR/shinR/footR");
+        footL = hip.Find("thighL/shinL/footL");
+        footR = hip.Find("thighR/shinR/footR");
     }
 
 
@@ -84,9 +86,12 @@ public class Predictor : MonoBehaviour
     {
         // completedSteps = 0;
 
+        this.isLeft = (Random.value < 0.5f);
+
         this.position = new Vector3(hip.position.x, 0.0f, hip.position.z);
         this.forward = Vector3.Normalize(new Vector3(hip.forward.x, 0.0f, hip.forward.z));
-        this.isLeft = (Random.value < 0.5f);
+        
+        this.last_pos = this.isLeft ? footR.position : footL.position;
 
         SetNextStep();
     }
@@ -94,17 +99,17 @@ public class Predictor : MonoBehaviour
 
     public void FixedUpdate()
     {
-        // float reward = 0.0f;
-        // if (isLeft)
-        // {
-        //     reward = rewardScale * (1.0f*completedSteps  - Vector3.Distance(transform.position, footL.position)/stepSize);
-        // }
-        // else
-        // {
-        //     reward = rewardScale * (1.0f*completedSteps  - Vector3.Distance(transform.position, footR.position)/stepSize);
-        // }
+        float reward = 0.0f;
+        if (isLeft)
+        {
+            reward = rewardScale * (-Vector3.Distance(this.last_pos, footR.position)/stepSize);
+        }
+        else
+        {
+            reward = rewardScale * (-Vector3.Distance(this.last_pos, footL.position)/stepSize);
+        }
 
-        // agent.AddReward(reward);
+        agent.AddReward(reward);
     }
 
 
@@ -115,8 +120,9 @@ public class Predictor : MonoBehaviour
             if(isLeft == (col.gameObject.name == "footL"))
             {
                 // completedSteps += 1;
-                this.isLeft = (col.gameObject.name != "footL");
                 agent.AddReward(5.0f);
+                this.isLeft = (col.gameObject.name != "footL");
+                this.last_pos = this.isLeft ? footR.position : footL.position;
                 SetNextStep();
             }
             // DrawPath();

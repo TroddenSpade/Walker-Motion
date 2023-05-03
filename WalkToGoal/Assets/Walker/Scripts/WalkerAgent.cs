@@ -13,7 +13,7 @@ public class WalkerAgent : Agent
     [Range(0.1f, 10)]
     [SerializeField]
     //The walking speed to try and achieve
-    private float m_TargetWalkingSpeed = 5;
+    private float m_TargetWalkingSpeed = 3;
 
     public float MTargetWalkingSpeed // property
     {
@@ -243,7 +243,7 @@ public class WalkerAgent : Agent
         // a. Match target speed
         //This reward will approach 1 if it matches perfectly and approach zero as it deviates
         var matchSpeedReward = GetMatchingVelocityReward(cubeForward * MTargetWalkingSpeed, GetAvgVelocity());
-
+        
         //Check for NaNs
         if (float.IsNaN(matchSpeedReward))
         {
