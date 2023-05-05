@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: ccb0f85f0009540d7ad997952e2aed7b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - target: {instanceID: 0}
+  - hips: {instanceID: 0}
+  - chest: {instanceID: 0}
+  - spine: {instanceID: 0}
+  - head: {instanceID: 0}
+  - thighL: {instanceID: 0}
+  - shinL: {instanceID: 0}
+  - footL: {instanceID: 0}
+  - thighR: {instanceID: 0}
+  - shinR: {instanceID: 0}
+  - footR: {instanceID: 0}
+  - armL: {instanceID: 0}
+  - forearmL: {instanceID: 0}
+  - handL: {instanceID: 0}
+  - armR: {instanceID: 0}
+  - forearmR: {instanceID: 0}
+  - handR: {instanceID: 0}
+  - predStep: {fileID: 1377361306747339267, guid: 6d325e7bde5af274b964329095e98527, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
