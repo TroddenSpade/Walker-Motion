@@ -18,3 +18,7 @@ https://user-images.githubusercontent.com/33734646/235879257-f77105fa-ec72-45ff-
 
 https://user-images.githubusercontent.com/33734646/236176683-7219982c-d6b8-4eb3-bbdc-8e2b4453453e.mp4
 
+
+### Werewolf Running
+
+https://user-images.githubusercontent.com/33734646/236560042-2a407beb-54fd-4925-96ec-4ed2fc023c27.mp4
