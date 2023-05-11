@@ -22,3 +22,17 @@ https://user-images.githubusercontent.com/33734646/236176683-7219982c-d6b8-4eb3-
 ### Werewolf Running
 
 https://user-images.githubusercontent.com/33734646/236560042-2a407beb-54fd-4925-96ec-4ed2fc023c27.mp4
+
+
+### Getting Up (+ Intrinsic Reward)
+
+https://github.com/TroddenSpade/Walker/assets/33734646/e81fe1b5-3a14-4a7c-850d-acb1aa513688
+
+#### Kip Up
+
+https://github.com/TroddenSpade/Walker/assets/33734646/eed5fa98-0f7f-4ce6-8b61-b17cf6e47fa1
+
+#### Getting Up (No Exploration - Stuck at Local minima)
+
+https://github.com/TroddenSpade/Walker/assets/33734646/0bf3e2f0-25a1-432b-a79f-2805caa3b54a
+
