@@ -30,9 +30,8 @@ https://github.com/TroddenSpade/Walker/assets/33734646/e81fe1b5-3a14-4a7c-850d-a
 
 #### Kip Up
 
-https://github.com/TroddenSpade/Walker/assets/33734646/eed5fa98-0f7f-4ce6-8b61-b17cf6e47fa1
+https://github.com/TroddenSpade/Walker/assets/33734646/b4c0c430-ce1f-4000-a684-b2f1a344c8af
 
 #### Getting Up (No Exploration - Stuck at Local minima)
 
-https://github.com/TroddenSpade/Walker/assets/33734646/0bf3e2f0-25a1-432b-a79f-2805caa3b54a
-
+https://github.com/TroddenSpade/Walker/assets/33734646/44d033ea-1120-4cc7-b4c3-d7c676a7aff9
